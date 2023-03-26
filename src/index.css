@@ -8,4 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+  
+}
+
+button {
+  cursor: pointer;
+  border: none;
 }
