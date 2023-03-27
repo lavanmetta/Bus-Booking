@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
+import "./SearchCard.css";
+import arrows from "../Assets/exchange.png";
 
-function SearchCard() {
+const SearchCard = () => {
   return (
-    <React.Fragment>
-      <div className='search-card-container'>
-      <input type='search' />
-      <input type='search' />
+    <div className="search">
+      <div className="search-card-container">
+        <input type="search" placeholder="From" />
+        <img src={arrows} alt="arrow" />
+        <input type="search" placeholder="to" />
+        <button>Search</button>
       </div>
-    </React.Fragment>
-  )
-}
+    </div>
+  );
+};
 
-export default SearchCard
+export default SearchCard;

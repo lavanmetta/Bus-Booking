@@ -1,11 +1,18 @@
 import React from 'react'
+import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar'
-import HomeSection from '../HomeSection/HomeSection'
-function Home() {
+import OfferCard from '../OfferCard/OfferCard';
+import SearchCard from '../SearchCard/SearchCard';
+import TopOperators from './TopOperators';
+import './Home.css'
+const Home = () => {
   return (
     <>
       <Navbar/>
-      <HomeSection/>
+      <OfferCard/>
+      <SearchCard/>
+      <TopOperators/>
+      <Footer/>
     </>
   )
 }
