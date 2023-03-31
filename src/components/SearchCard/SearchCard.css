@@ -7,16 +7,15 @@
     padding: 3rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
     padding: 2rem;
-    background-color: #f7fafc;
+    background-color: #f8fbfe;
 }
 
 .search-card-container > img {
