@@ -1,6 +1,7 @@
 import React from "react";
 import "./SearchCard.css";
 import arrows from "../Assets/exchange.png";
+import ReadyToBook from "../Home/ReadyToBook";
 
 const SearchCard = () => {
   return (
@@ -10,6 +11,9 @@ const SearchCard = () => {
         <img src={arrows} alt="arrow" />
         <input type="search" placeholder="Enter Destination" />
         <button>Search</button>
+      </div>
+      <div>
+        <ReadyToBook />
       </div>
     </div>
   );

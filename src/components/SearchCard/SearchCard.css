@@ -1,21 +1,22 @@
 .search-card-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(252, 254, 255);
     padding: 3rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .search {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 2rem;
+    background-color: #f7fafc;
 }
 
 .search-card-container > img {
