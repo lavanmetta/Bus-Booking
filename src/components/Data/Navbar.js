@@ -9,16 +9,16 @@ const links = [
         link: '/home'
     },
     {
-        LinkName: 'Login',
-        link: '/about'
+        LinkName: 'Register',
+        link: '/register'
     },
     {
         LinkName: 'Contact',
-        link: '/about'
+        link: '/contact'
     },
     {
         LinkName: 'Profile',
-        link: '/about'
+        link: '/profile'
     }
 ]
 
