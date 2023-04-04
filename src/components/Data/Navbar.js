@@ -9,6 +9,10 @@ const links = [
         link: '/home'
     },
     {
+        LinkName: 'Book',
+        link: '/booking'
+    },
+    {
         LinkName: 'Register',
         link: '/register'
     },

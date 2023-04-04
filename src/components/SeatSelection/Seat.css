@@ -1,0 +1,84 @@
+.seat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.seat-selection {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 2fr 80px);
+    gap: 10px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+  
+   
+}
+
+.seat > span {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.seat > span {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid rgb(13, 13, 13);
+}
+
+
+.seat-details {
+  width: 66%;
+}
+
+.available {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ava-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.ava-container  span {
+    margin: 5px;
+}
+
+.ava {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid rgb(13, 13, 13);
+}
+.bkd {
+    background-color: rgb(86, 84, 84);
+    color: white;
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid rgb(69, 68, 68);
+}
+.sel {
+  background-color: crimson;
+  color: white;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid crimson;
+}
