@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../Footer/Footer';
-import Navbar from '../Navbar/Navbar'
+
 import OfferCard from '../OfferCard/OfferCard';
 import SearchCard from '../SearchCard/SearchCard';
 import TopOperators from './TopOperators';
@@ -8,10 +8,11 @@ import './Home.css'
 import OurServices from './OurServices';
 import PopularBusRoutes from './PopularBusRoutes';
 import TrendingPackages from './TrendingPackages';
+import NavImg from '../Navbar/NavImg';
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <NavImg/>
       <OfferCard/>
       <SearchCard/>
       <TrendingPackages/>

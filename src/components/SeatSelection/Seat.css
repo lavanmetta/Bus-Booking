@@ -1,52 +1,55 @@
 .seat-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 4rem 1rem 1rem 1rem;
 }
 
 .seat-selection {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 2fr 80px);
-    gap: 10px;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 2fr 80px);
+  gap: 10px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: rgb(28, 222, 108) 0px 3px 8px;
   
-  
-   
 }
 
 .seat > span {
-    margin-left: 25px;
-    cursor: pointer;
+  margin-left: 25px;
+  cursor: pointer;
 }
 
 .seat > span {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px solid rgb(13, 13, 13);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid rgb(13, 13, 13);
 }
-
 
 .seat-details {
   width: 66%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .available {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .ava-container {
@@ -57,23 +60,23 @@
   margin: 10px;
 }
 
-.ava-container  span {
-    margin: 5px;
+.ava-container span {
+  margin: 5px;
 }
 
 .ava {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px solid rgb(13, 13, 13);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid rgb(13, 13, 13);
 }
 .bkd {
-    background-color: rgb(86, 84, 84);
-    color: white;
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px solid rgb(69, 68, 68);
+  background-color: rgb(86, 84, 84);
+  color: white;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid rgb(69, 68, 68);
 }
 .sel {
   background-color: crimson;
@@ -82,3 +85,68 @@
   border-radius: 6px;
   border: 1px solid crimson;
 }
+
+.location-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.location-search img {
+  width: 20px;
+  height: 20px;
+}
+
+.location-search > input {
+  height: 36px;
+  margin: 10px;
+}
+
+.location-search > button {
+    background-color: crimson;
+    height: 36px;
+    border-radius: 6px;
+    color: white;
+    width: 120px;
+    font-weight: bold;
+}
+
+
+.booking-details > h4 {
+  margin: 5px;
+  font-weight: 500;
+}
+
+.booking-details > h4 > span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+
+  .check-out {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .check-out > button {
+    background-color: crimson;
+    width: 150px;
+    height: 38px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+
+  }
+
+  .terms-box > span{
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .terms-box > input {
+    margin: 5px
+  }

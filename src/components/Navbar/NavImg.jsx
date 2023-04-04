@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./Navbar.css";
+import Navbar from "./Navbar";
 
 const images = NavbarImages();
 
@@ -48,6 +49,9 @@ function NavImg() {
           <img className="nav-img" src={images[0]} alt="nav" />
         </div>
       </Slider>
+      <div>
+      <Navbar/>
+    </div>
     </div>
   );
 }

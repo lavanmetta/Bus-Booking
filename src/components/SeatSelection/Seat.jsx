@@ -3,6 +3,7 @@ import { seatDetailsList } from "../Data/Seat";
 import { useState, useEffect } from "react";
 import "./Seat.css";
 import SeatDetails from "./SeatDetails";
+import Navbar from "../Navbar/Navbar";
 
 function Seat() {
   const [seatDetails, SetSeatDetails] = useState([]);
@@ -14,6 +15,10 @@ function Seat() {
 
   return (
     <React.Fragment>
+      <div>
+        <Navbar />
+      </div>
+
       <div className="seat-container">
         <div className="seat-selection">
           {seatDetails.map((each) => (
@@ -23,8 +28,7 @@ function Seat() {
           ))}
         </div>
         <div className="seat-details">
-        
-        <SeatDetails/>
+          <SeatDetails />
         </div>
       </div>
     </React.Fragment>

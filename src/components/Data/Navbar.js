@@ -6,7 +6,7 @@ import img3 from '../Assets/nav3.jpg'
 const links = [
     {
         LinkName: 'Home',
-        link: '/home'
+        link: '/'
     },
     {
         LinkName: 'Book',
