@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { useContext, useState } from 'react'
+import { Store } from "./Seat";
+
 function BookedDetails() {
+  const [seats, setSeats] = useState([])
+  const [seatNum] = useContext(Store)
+
+  useEffect(() => {
+    if (seatNum) {
+      setSeats(prevSeats => [...prevSeats, seatNum]);
+    }
+  }, [seatNum]);
+ 
+
+
   return (
     <React.Fragment>
       <div>
@@ -22,7 +36,7 @@ function BookedDetails() {
                 <tr>
                   <td>Karimnagar</td>
                   <td>Hyderabad</td>
-                  <td>A1, A2, A3</td>
+                  <td>{seats && seats.map(seat => seat.seatNumber).join(', ')}</td>
                   <td>Hyderabad</td>
                   <td>234/-</td>
                 </tr>
