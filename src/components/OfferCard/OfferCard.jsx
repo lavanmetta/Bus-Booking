@@ -5,7 +5,7 @@ const OfferCard = () => {
   return (
     <div className="offer-card-container">
       <div className="offer-heading">
-        <h1>
+        <h1 className="per">
           25% <span className="off">Off</span>
         </h1>
       </div>

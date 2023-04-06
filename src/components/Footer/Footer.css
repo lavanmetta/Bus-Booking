@@ -83,3 +83,32 @@
 .footer-span {
     font-size: 1.4rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer-main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+    .footer-main-container > div {
+        margin: 0px 10px 10px 20px;
+    }
+
+    .footer-resource > h4 {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+
+    .imp-l {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    .imp-links > a {
+        margin-bottom: 2px;
+    }
+    .imp-links > a > i {
+        display: none;
+    }
+  }

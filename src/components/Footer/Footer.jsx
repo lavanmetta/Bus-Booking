@@ -30,7 +30,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h4>Important Links</h4>
+          <h4 className="imp-l">Important Links</h4>
           <div className="imp-links">
             <Link>Home</Link>
             <Link>Coupons</Link>
@@ -40,7 +40,7 @@ function Footer() {
         </div>
 
         <div>
-          <h4>Follow Us</h4>
+          <h4 className="imp-l">Follow Us</h4>
           <div className="imp-links">
             <Link><i className="ri-instagram-line"></i> Instagram</Link>
             <Link><i className="ri-linkedin-fill"></i> Linkedin</Link>

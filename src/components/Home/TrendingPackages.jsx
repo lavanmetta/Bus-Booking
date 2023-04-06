@@ -24,6 +24,20 @@ function TrendingPackages() {
     slidesPerRow: 4,
     centerMode: true,
     className: "center",
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: { slidesToShow: 1, slidesToScroll: 1,slidesPerRow: 4, infinite: false }
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1, slidesToScroll: 1, slidesPerRow: 1, infinite: false }
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3, slidesToScroll: 3, slidesPerRow: 4, infinite: false }
+      }
+    ]
   };
   return (
     <React.Fragment>
