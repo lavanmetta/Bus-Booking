@@ -10,6 +10,7 @@
     height: 60px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     z-index: 999;
+    max-width: 1400px;
 }
 
 .nav-img {

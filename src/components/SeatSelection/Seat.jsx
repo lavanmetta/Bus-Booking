@@ -10,19 +10,32 @@ export const Store = createContext()
 function Seat() {
   const [seatDetails, SetSeatDetails] = useState([]);
   const [seatNum, setSeatNum] = useState([]);
-  const [select, setSelected] = useState('ava');
+  const [selectedSeats, setSelectedSeats] = useState([]);
 
   useEffect(() => {
     const details = seatDetailsList();
     SetSeatDetails(details);
   }, []);
 
-const seatHandler = (seatNumber) => {
-   const seatNumbers = seatDetails.filter((eachSeat) => eachSeat.seatNumber === seatNumber)
-   setSeatNum(seatNumbers)
-   setSelected('sel')
-   console.log(select)
-}
+  const seatHandler = (seatNumber) => {
+    const updatedSeatDetails = seatDetails.map((seat) => {
+      if (seat.seatNumber === seatNumber) {
+        return {
+          ...seat,
+          isAvailability: !seat.isAvailability 
+        };
+        
+      }
+      
+      return seat;
+
+    });
+    const seatNumbers = updatedSeatDetails.filter((eachSeat) => eachSeat.seatNumber === seatNumber)
+    setSeatNum(seatNumbers);
+    SetSeatDetails(updatedSeatDetails);
+  }
+  
+ 
 
 
   return (
@@ -36,7 +49,7 @@ const seatHandler = (seatNumber) => {
         <div className="seat-selection">
           {seatDetails.map((each) => (
             <div className="seat" key={each.id} >
-              <span className={`material-symbols-outlined ${each.seatNumber === seatNum[0]?.seatNumber ? 'sel' : 'ava'}`}  onClick={() => seatHandler(each.seatNumber)}>chair</span>
+            <span className={`material-symbols-outlined ${each.isAvailability ? 'ava' : 'sel'}`} onClick={() => seatHandler(each.seatNumber)}>chair</span>
             </div>
           ))}
         </div>

@@ -11,7 +11,7 @@ import TrendingPackages from './TrendingPackages';
 import NavImg from '../Navbar/NavImg';
 const Home = () => {
   return (
-    <>
+    <div style={{maxWidth: '1400px', margin: 'auto'}}>
       <NavImg/>
       <OfferCard/>
       <SearchCard/>
@@ -20,7 +20,7 @@ const Home = () => {
       <OurServices/>
       <TopOperators/>
       <Footer/>
-    </>
+    </div>
   )
 }
 
