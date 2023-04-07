@@ -77,6 +77,8 @@
     align-items: center;
 }
 
+
+
 @media only screen and (max-width: 600px) {
     .img-p2 {
       font-size: 1rem;
@@ -93,4 +95,44 @@
     .nav-img {
         height: 60vh;
     }
+
+   
+    .nvt {
+        font-size: 26px;
+     }
+     .hamburger {
+       margin: 0.5rem;
+       background-color: transparent;
+       color: white;
+       font-weight: bold;
+     }
+
+     .nav-links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        width: 60%;
+        height: 100vh;
+        margin: 0px;
+        right: 0;
+        top: 60px;
+        margin-right: auto;
+        align-items: center;
+        padding-top: 1rem;
+        transform: translateX(100%);
+        transition: all 0.4s ease-in-out;
+     }
+     .nav-link-a {
+        
+        transform: translateX(0);
+        transition: transform 0.5s ease;
+      }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+      .hamburger {
+        display: none;
+      }
   }

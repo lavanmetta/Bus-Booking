@@ -15,8 +15,6 @@ function TrendingPackages() {
 
   const settings = {
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -27,11 +25,11 @@ function TrendingPackages() {
     responsive: [
       {
         breakpoint: 320,
-        settings: { slidesToShow: 1, slidesToScroll: 1,slidesPerRow: 4, infinite: false }
+        settings: { slidesToShow: 1, slidesToScroll: 1,slidesPerRow: 1, infinite: true }
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, slidesToScroll: 1, slidesPerRow: 1, infinite: false }
+        settings: { slidesToShow: 1, slidesToScroll: 1, slidesPerRow: 1, infinite: true }
       },
       {
         breakpoint: 1024,
