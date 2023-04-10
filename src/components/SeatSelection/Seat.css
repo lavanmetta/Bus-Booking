@@ -223,9 +223,25 @@
  .location-search {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
+ }
+ .location-search > input {
+  width: 100%;
  }
  .table-container {
   overflow: auto;
  }
+ .search-container {
+  position: absolute;
+  height: 100px;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  list-style-type: none;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  left: auto;
+  top: 175%;
+}
 }
