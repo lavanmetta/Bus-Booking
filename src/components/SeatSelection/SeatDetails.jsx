@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { seatAvailability } from "../Data/SeatDetails";
 import arrows from "../Assets/exchange.png";
 import BookedDetails from "./BookedDetails";
 
-function SeatDetails(props) {
+function SeatDetails() {
   const [available, setAvailability] = useState([]);
   const [city, setCity] = useState([]);
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [activeInput, setActiveInput] = useState("");
+
+  const [pop, setPop] = useState(false);
 
   useEffect(() => {
     const details = seatAvailability();
@@ -22,7 +24,6 @@ function SeatDetails(props) {
       .get("https://in-city-e66a8-default-rtdb.firebaseio.com/city.json")
       .then((response) => {
         setCity(response.data);
-        
       })
       .catch((error) => {
         console.log(error);
@@ -63,8 +64,11 @@ function SeatDetails(props) {
     }
     setSearchResults([]);
   };
-  
-  
+
+  const bookHandler = () => {
+    setPop((prevPop) => !prevPop);
+    console.log(pop);
+  };
 
   return (
     <React.Fragment>
@@ -108,19 +112,20 @@ function SeatDetails(props) {
 
         {searchResults.length > 0 && (
           <div className="search-container">
-           
-              {searchResults.map((result) => (
-                <li key={result.city} onClick={() => onCitySelect(result.city)}>
-                  {result.city}
-                </li>
-              ))}
-            
+            {searchResults.map((result) => (
+              <li key={result.city} onClick={() => onCitySelect(result.city)}>
+                {result.city}
+              </li>
+            ))}
           </div>
         )}
-        <button disabled={!source || !destination}>Book</button>
+
+        <button disabled={!source || !destination} onClick={bookHandler}>
+          Book
+        </button>
       </div>
 
-      <BookedDetails SeatDetails={props} />
+      <BookedDetails  />
     </React.Fragment>
   );
 }

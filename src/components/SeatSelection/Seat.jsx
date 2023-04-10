@@ -5,12 +5,12 @@ import "./Seat.css";
 import SeatDetails from "./SeatDetails";
 import Navbar from "../Navbar/Navbar";
 
-export const Store = createContext()
+export const Store = createContext();
 
 function Seat() {
   const [seatDetails, SetSeatDetails] = useState([]);
   const [seatNum, setSeatNum] = useState([]);
-  const [selectedSeats, setSelectedSeats] = useState([]);
+ 
 
   useEffect(() => {
     const details = seatDetailsList();
@@ -22,42 +22,47 @@ function Seat() {
       if (seat.seatNumber === seatNumber) {
         return {
           ...seat,
-          isAvailability: !seat.isAvailability 
+          isAvailability: !seat.isAvailability,
         };
-        
       }
-      
-      return seat;
 
+      return seat;
     });
-    const seatNumbers = updatedSeatDetails.filter((eachSeat) => eachSeat.seatNumber === seatNumber)
+    const seatNumbers = updatedSeatDetails.filter(
+      (eachSeat) => eachSeat.seatNumber === seatNumber
+    );
     setSeatNum(seatNumbers);
     SetSeatDetails(updatedSeatDetails);
-  }
-  
- 
+  };
+
 
 
   return (
     <Store.Provider value={seatNum}>
-    <React.Fragment>
-      <div>
-        <Navbar />
-      </div>
 
-      <div className="seat-container">
-        <div className="seat-selection">
-          {seatDetails.map((each) => (
-            <div className="seat" key={each.id} >
-            <span className={`material-symbols-outlined ${each.isAvailability ? 'ava' : 'sel'}`} onClick={() => seatHandler(each.seatNumber)}>chair</span>
-            </div>
-          ))}
+      <React.Fragment>
+        <Navbar />
+
+        <div className="seat-container">
+          <div className="seat-selection">
+            {seatDetails.map((each) => (
+              <div className="seat" key={each.id}>
+                <span
+                  className={`material-symbols-outlined ${
+                    each.isAvailability ? "ava" : "sel"
+                  }`}
+                  onClick={() => seatHandler(each.seatNumber)}
+                >
+                  chair
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="seat-details">
+            <SeatDetails />
+          </div>
         </div>
-        <div className="seat-details">
-          <SeatDetails />
-        </div>
-      </div>
-    </React.Fragment>
+      </React.Fragment>
     </Store.Provider>
   );
 }

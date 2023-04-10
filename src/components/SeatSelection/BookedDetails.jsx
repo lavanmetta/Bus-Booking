@@ -7,7 +7,7 @@ import { Store } from "./Seat";
 function BookedDetails() {
   const [seats, setSeats] = useState([])
   const [seatNum] = useContext(Store)
-
+  
   useEffect(() => {
     if (seatNum) {
       setSeats(prevSeats => [...prevSeats, seatNum]);
