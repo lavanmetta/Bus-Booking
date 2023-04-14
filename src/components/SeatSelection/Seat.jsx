@@ -10,7 +10,6 @@ export const Store = createContext();
 function Seat() {
   const [seatDetails, SetSeatDetails] = useState([]);
   const [seatNum, setSeatNum] = useState([]);
- 
 
   useEffect(() => {
     const details = seatDetailsList();
@@ -22,24 +21,23 @@ function Seat() {
       if (seat.seatNumber === seatNumber) {
         return {
           ...seat,
-          isAvailability: !seat.isAvailability,
+          isSelected: !seat.isSelected,
         };
       }
-
+  
       return seat;
     });
-    const seatNumbers = updatedSeatDetails.filter(
-      (eachSeat) => eachSeat.seatNumber === seatNumber
-    );
-    setSeatNum(seatNumbers);
+  
+    const selectedSeats = updatedSeatDetails.filter((seat) => seat.isSelected);
+  
+    setSeatNum(selectedSeats.length ? selectedSeats : []);
     SetSeatDetails(updatedSeatDetails);
   };
-
-
+  
+  
 
   return (
     <Store.Provider value={seatNum}>
-
       <React.Fragment>
         <Navbar />
 
@@ -49,7 +47,11 @@ function Seat() {
               <div className="seat" key={each.id}>
                 <span
                   className={`material-symbols-outlined ${
-                    each.isAvailability ? "ava" : "sel"
+                    each.isAvailability ? "ava" : "bkd"
+                  } ${
+                    seatNum.some((seat) => seat.seatNumber === each.seatNumber)
+                      ? "sel"
+                      : "ava"
                   }`}
                   onClick={() => seatHandler(each.seatNumber)}
                 >

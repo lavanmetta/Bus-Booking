@@ -2,7 +2,7 @@ const seats = [
 
     {
         id: 1,
-        isAvailability: true,
+        isAvailability: false,
         price: '234/-',
         seatNumber: 'A1'
     },
@@ -14,7 +14,7 @@ const seats = [
     },
     {
         id: 3,
-        isAvailability: true,
+        isAvailability: false,
         price: '234/-',
         seatNumber: 'A3'
     },
